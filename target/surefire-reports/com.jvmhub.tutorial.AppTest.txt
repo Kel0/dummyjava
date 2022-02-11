@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: com.jvmhub.tutorial.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.244 sec <<< FAILURE!
+testApp(com.jvmhub.tutorial.AppTest)  Time elapsed: 0.23 sec  <<< ERROR!
+org.hibernate.MappingException: Unable to load class [ com.jvmhub.tutorial.entity.AppUser] declared in Hibernate configuration <mapping/> entry
+	at org.hibernate.cfg.Configuration.parseMappingElement(Configuration.java:2219)
+	at org.hibernate.cfg.Configuration.parseSessionFactory(Configuration.java:2167)
+	at org.hibernate.cfg.Configuration.doConfigure(Configuration.java:2147)
+	at org.hibernate.cfg.Configuration.doConfigure(Configuration.java:2100)
+	at org.hibernate.cfg.Configuration.configure(Configuration.java:2015)
+	at org.hibernate.cfg.Configuration.configure(Configuration.java:1994)
+	at com.jvmhub.tutorial.AppTest.testApp(AppTest.java:17)
+Caused by: java.lang.ClassNotFoundException: com.jvmhub.tutorial.entity.AppUser
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at org.hibernate.internal.util.ReflectHelper.classForName(ReflectHelper.java:192)
+	at org.hibernate.cfg.Configuration.parseMappingElement(Configuration.java:2216)
+	... 34 more
+
